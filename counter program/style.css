@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Arial';
+    font-size: 8em;
+}
+
+#container {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 5px;
+    cursor: pointer;
+    background-color: rgba(16, 162, 224, 0.639);
+}
+
+button:hover {
+    background-color: rgba(16, 162, 224, 0.739);
+    transform: scale(1.2);
+    transition: all .3s;
+    box-shadow: 0px 0px 10px black;
+}
