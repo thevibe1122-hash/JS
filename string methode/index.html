@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Methods Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-badge">JS Core</div>
+            <h1>String Methods Explorer</h1>
+            <div class="user-display">
+                <span class="label">Target Username:</span>
+                <span id="myheading" class="username-badge">Loading...</span>
+            </div>
+        </header>
+
+        <main class="grid-container">
+            <div class="card" data-method="length">
+                <div class="card-num">01</div>
+                <h3>.length</h3>
+                <p id="myp" class="method-output"></p>
+            </div>
+            <div class="card" data-method="charAt">
+                <div class="card-num">02</div>
+                <h3>.charAt()</h3>
+                <p id="myp1" class="method-output"></p>
+            </div>
+            <div class="card" data-method="indexOf">
+                <div class="card-num">03</div>
+                <h3>.indexOf()</h3>
+                <p id="myp2" class="method-output"></p>
+            </div>
+            <div class="card" data-method="lastIndexOf">
+                <div class="card-num">04</div>
+                <h3>.lastIndexOf()</h3>
+                <p id="myp3" class="method-output"></p>
+            </div>
+            <div class="card" data-method="trim">
+                <div class="card-num">05</div>
+                <h3>.trim()</h3>
+                <p id="myp4" class="method-output"></p>
+            </div>
+            <div class="card" data-method="toUpperCase">
+                <div class="card-num">06</div>
+                <h3>.toUpperCase()</h3>
+                <p id="myp5" class="method-output"></p>
+            </div>
+            <div class="card" data-method="toLowerCase">
+                <div class="card-num">07</div>
+                <h3>.toLowerCase()</h3>
+                <p id="myp6" class="method-output"></p>
+            </div>
+            <div class="card" data-method="startsWith">
+                <div class="card-num">08</div>
+                <h3>.startsWith()</h3>
+                <p id="myp7" class="method-output"></p>
+            </div>
+            <div class="card" data-method="endsWith">
+                <div class="card-num">09</div>
+                <h3>.endsWith()</h3>
+                <p id="myp8" class="method-output"></p>
+            </div>
+            <div class="card" data-method="includes">
+                <div class="card-num">10</div>
+                <h3>.includes()</h3>
+                <p id="myp9" class="method-output"></p>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            Interactive JavaScript Playground • Designed with Antigravity
+        </footer>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

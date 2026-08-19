@@ -1,0 +1,234 @@
+:root {
+    --bg-color: #0d0e15;
+    --card-bg: rgba(22, 24, 37, 0.7);
+    --card-border: rgba(255, 255, 255, 0.06);
+    --card-hover-border: rgba(139, 92, 246, 0.4);
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --accent-primary: #8b5cf6;
+    --accent-secondary: #3b82f6;
+    --accent-gradient: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+    --accent-glow: rgba(139, 92, 246, 0.15);
+    --code-bg: #1e1f29;
+    --success-color: #10b981;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2.5rem 1.5rem;
+    overflow-x: hidden;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(59, 102, 246, 0.08) 0%, transparent 40%);
+}
+
+.app-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.app-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-badge {
+    background: var(--accent-gradient);
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+}
+
+.app-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #ffffff, #9ca3af);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+
+.user-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+.user-display .label {
+    color: var(--text-secondary);
+}
+
+.username-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    color: #fff;
+    background: rgba(139, 92, 246, 0.15);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    white-space: pre; /* Preserves leading/trailing spaces visually */
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Card Styling */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--card-hover-border);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 15px var(--accent-glow);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--accent-gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card-num {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    opacity: 0.6;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Method output display inside p tag */
+.method-output {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+}
+
+.method-output .expr-line {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-secondary);
+    background: var(--code-bg);
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    border-left: 2px solid var(--accent-primary);
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.method-output .result-line {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+}
+
+.method-output .result-label {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.method-output .result-val {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--success-color);
+    font-weight: 600;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.method-output .string-literal {
+    color: #a7f3d0;
+}
+
+.method-output .number-literal {
+    color: #f3a7f2;
+}
+
+.method-output .boolean-literal {
+    color: #6ee7b7;
+}
+
+/* Footer styling */
+.app-footer {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 1.5rem 1rem;
+    }
+    .app-header h1 {
+        font-size: 2rem;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
