@@ -1,0 +1,52 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    background: radial-gradient(ellipse at 0% 50%, rgb(43, 42, 42) 10%, rgb(106, 106, 106) 50%, rgb(172, 172, 172) 90%);
+}
+
+button {
+    border: #39e622 solid 5px;
+    border-radius: 100% 100% 20% 100%;
+    color: rgb(4, 66, 0);
+    background-color: #39e622;
+}
+
+
+button:hover {
+    background-color: rgb(0, 255, 34);
+    color: rgb(248, 244, 244);
+    border: rgb(119, 255, 0) solid 5px;
+    border-radius: 100% 100% 100% 100%;
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+}
+
+button:active {
+    background-color: rgb(0, 255, 34);
+    color: rgb(0, 0, 0);
+    border: rgb(119, 255, 0) solid 5px;
+    border-radius: 100% 100% 100% 100%;
+    transform: scale(.8);
+    transition: all 0.2s ease-in-out;
+}
+
+button:focus {
+    background-color: rgb(0, 255, 34);
+    color: rgb(248, 244, 244);
+    border: rgb(119, 255, 0) solid 5px;
+    border-radius: 100% 100% 100% 100%;
+    animation: pulsing_effect 1s infinite;
+}
+
+@keyframes pulsing_effect {
+    0% {
+        box-shadow: 0 0 0 0 rgb(119, 255, 0);
+
+        transform: scale(1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 50px rgba(119, 255, 0, 0);
+        transform: scale(1.1);
+    }
+}
