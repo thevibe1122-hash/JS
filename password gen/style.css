@@ -1,0 +1,194 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(78, 126, 165);
+    margin: auto;
+    text-align: center;
+
+    h1 {
+        color: red;
+        text-shadow: 2px 2px 2px black;
+    }
+
+    label {
+        color: rgb(0, 13, 69);
+        margin-right: 50px;
+        font-size: 1.1em;
+        font-weight: bold;
+        text-shadow: 2px 2px 2px rgba(2, 155, 155, 0.726);
+    }
+
+    input {
+        margin: 15px;
+        padding: 5px;
+        border: 2px solid black;
+        border-radius: 5px;
+        width: 50px;
+        box-shadow: inset 2px 2px 5px black;
+        text-align: center;
+        font-size: 1.1em;
+        position: relative;
+        left: -25px
+    }
+
+    .password-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 15px auto;
+        width: 320px;
+    }
+
+    #password {
+        color: #02561b;
+        font-size: 1.3em;
+        font-weight: bold;
+        text-shadow: 0px 0px 20px rgb(255, 255, 255);
+        margin: 0;
+        flex-grow: 1;
+        height: 39px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+        scrollbar-width: none;
+        background-color: rgba(0, 0, 0, 0.276);
+        border: 2px solid black;
+        box-shadow: inset 2px 2px 5px black;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    #copy-btn {
+        height: 39px;
+        width: 45px;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: rgb(78, 126, 165);
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 2px 2px 5px black;
+        transition: all 0.2s ease-in-out;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    #copy-btn:hover {
+        background-color: rgb(118, 135, 172);
+        box-shadow: 2px 2px 5px rgb(2, 155, 155);
+    }
+
+    #copy-btn:active {
+        transform: scale(0.95);
+    }
+
+    #pl {
+        display: block;
+        margin: 15px auto 5px auto;
+        text-align: center;
+    }
+
+
+
+
+
+
+    .container {
+        padding: 20px;
+        border: 2px solid black;
+        width: 450px;
+        background: linear-gradient(120deg, #44c1cc, #7be480);
+        box-shadow: inset 2px 2px 15px black;
+
+        #generate-btn {
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            width: 200px;
+            background-color: rgb(78, 126, 165);
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px black;
+        }
+
+
+    }
+
+    .check-box {
+        text-align: center;
+        margin: 15px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid black;
+        border-radius: 25px;
+        box-shadow: inset 2px 2px 15px black;
+
+
+
+        .checkbox {
+            display: none;
+        }
+
+        .indicator {
+
+            position: relative;
+            height: 15px;
+            width: 50px;
+            border-radius: 45%;
+            border: 3px solid black;
+            margin-right: 8px;
+            right: -15em;
+            top: -1em;
+            background-color: rgb(255, 251, 251);
+            overflow: hidden;
+            box-shadow: inset 2px 2px 5px black;
+
+            .inner-indicator {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                background-color: rgb(0, 134, 252);
+                box-shadow: -5px 0px 8px black;
+                transform: translateX(35px);
+
+
+            }
+        }
+
+
+
+    }
+
+    #generate-btn:hover {
+        background-color: rgb(118, 135, 172);
+        box-shadow: 2px 2px 5px rgb(2, 155, 155);
+
+    }
+
+    #generate-btn:active {
+        background-color: red;
+    }
+
+    #generate-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+}
