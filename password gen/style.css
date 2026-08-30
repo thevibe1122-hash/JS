@@ -65,13 +65,11 @@ body {
         border: 2px solid black;
         box-shadow: inset 2px 2px 5px black;
         border-radius: 5px;
-        box-sizing: border-box;
     }
 
     #password::-webkit-scrollbar {
         display: none;
     }
-
     #copy-btn {
         height: 39px;
         width: 45px;
