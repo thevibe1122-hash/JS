@@ -28,8 +28,16 @@ const adjustedPrices = prices.map(price => price * 1.10);
 
 console.log(adjustedPrices);
 
-const names = ["Sujal", "Sandeep", "Priyanshu", "Akash", "Rahul"];
+const name = ["Sujal", "Sandeep", "Priyanshu", "Akash", "Rahul"];
 
-const upperCaseNames = names.map(name => name.toUpperCase());
+const upperCaseNames = name.map(name => name.toUpperCase());
 
 console.log(upperCaseNames);
+
+
+const names = [`salah `, `the`, `goat`];
+
+const cap_names = names.map(names => names.charAt(0).toUpperCase() + names.slice(1)
+)
+
+console.log(cap_names);
