@@ -66,3 +66,14 @@ button {
     color: white;
 
 }
+
+button.correct {
+    background-color: #2e7d32;
+    color: #ffffff;
+}
+
+button.wrong,
+button.guessed {
+    background-color: #8b3a3a;
+    color: #ffffff;
+}

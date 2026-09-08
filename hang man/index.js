@@ -77,24 +77,19 @@ function isAttemptsRunOut() {
 }
 
 function handleGuess(letter) {
-    if (!gameActive) {
-        return;
-    }
-
-    if (isLetterGuessed(letter)) {
-        alert(`You have already guessed the letter '${letter.toUpperCase()}'!`);
+    if (!gameActive || isLetterGuessed(letter)) {
         return;
     }
 
     addLetterGuessed(letter);
 
-    // Disable on-screen button if it exists
     const btn = document.getElementById(letter);
-    if (btn) {
-        btn.disabled = true;
-    }
 
     if (correctWord.includes(letter)) {
+        if (btn) {
+            btn.classList.add("correct");
+        }
+
         // Replace all underscores at indices matching the guessed letter
         for (let i = 0; i < correctWord.length; i++) {
             if (correctWord[i] === letter) {
@@ -107,6 +102,10 @@ function handleGuess(letter) {
             endGame(true);
         }
     } else {
+        if (btn) {
+            btn.classList.add("wrong");
+        }
+
         wrongGuessCount++;
         updateAttemptsDisplay();
         updateImageDisplay();
@@ -124,13 +123,11 @@ function pressed(letter) {
 
 function endGame(isWin) {
     gameActive = false;
-    setTimeout(() => {
-        if (isWin) {
-            alert("Congratulations! You guessed the word: " + correctWord);
-        } else {
-            alert("Game Over! The word was: " + correctWord);
-        }
-    }, 100);
+    if (isWin) {
+        Attempts.textContent = "🎉 Congratulations! You guessed the word!";
+    } else {
+        Attempts.textContent = "☠️ Game Over! The word was: " + correctWord;
+    }
 }
 
 function newGame() {
@@ -139,10 +136,10 @@ function newGame() {
     lettersFound = [];
     lettersGuessed = [];
 
-    // Enable all keyboard buttons again
+    // Reset all keyboard buttons
     const buttons = document.querySelectorAll(".keyboard button");
     buttons.forEach((button) => {
-        button.disabled = false;
+        button.classList.remove("correct", "wrong", "guessed");
     });
 
     updateAttemptsDisplay();
