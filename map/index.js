@@ -8,7 +8,7 @@ function square(element) {
 
 const squareNum = num.map(square);
 
-console.log(squareNum);
+// console.log(squareNum);
 
 // example of using an anonymous function with map
 const squareNum2 = num.map(function (element) {
@@ -18,7 +18,7 @@ const squareNum2 = num.map(function (element) {
 // example of using an arrow function with map
 const squareNum3 = num.map(element => element * element);
 
-console.log(squareNum3);
+// console.log(squareNum3);
 
 
 //another example of map
@@ -26,13 +26,13 @@ const prices = [20, 40, 60, 80, 100];
 
 const adjustedPrices = prices.map(price => price * 1.10);
 
-console.log(adjustedPrices);
+// console.log(adjustedPrices);
 
 const name = ["Sujal", "Sandeep", "Priyanshu", "Akash", "Rahul"];
 
 const upperCaseNames = name.map(name => name.toUpperCase());
 
-console.log(upperCaseNames);
+// console.log(upperCaseNames);
 
 
 const names = [`salah `, `the`, `goat`];
@@ -40,4 +40,6 @@ const names = [`salah `, `the`, `goat`];
 const cap_names = names.map(names => names.charAt(0).toUpperCase() + names.slice(1)
 )
 
-console.log(cap_names);
+// console.log(cap_names);
+
+
