@@ -1,0 +1,22 @@
+body {
+    margin: 0%;
+    height: 80em;
+}
+
+#conatiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    height: 60em;
+    width: 100%;
+    background: linear-gradient(90deg, #252525, #444, #888, #dedede, #888, #444, #101010);
+}
+
+#clock{
+    font-family: monospace;
+    font-size: 6.5rem;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+    background-color: rgba(240, 248, 255, 0.025);
+}
