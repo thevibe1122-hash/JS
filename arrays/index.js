@@ -18,8 +18,7 @@ fruits.unshift(`watermelon`) // ["watermelon", "apple", "banana", "orange", "man
 fruits.shift() // ["apple", "banana", "orange", "mango"]
 
 // .length is used to find the number of elements in an array
-console.log(fruits
-    .length); // 4
+console.log(fruits.length); // 4
 
 // .slice(star, end) is used to return a shallow copy of a portion of an array
 console.log(fruits

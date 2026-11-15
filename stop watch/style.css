@@ -1,0 +1,66 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10em;
+    font-family: monospace;
+    display: flex;
+    justify-self: center;
+    background: linear-gradient(90deg,black, rgb(147, 145, 145), white,white, rgb(147, 145, 145),black);
+
+}
+
+#container{
+    border: 2px black solid;
+    padding: 20px;
+    height: 2em;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    background: linear-gradient(90deg , rgb(4, 4, 176) , rgb(170, 0, 255),rgb(217, 0, 255),rgb(4, 4, 176))
+
+}
+#stop-watch{
+    font-weight: bold;
+    margin: 2%;
+    height: auto;
+    text-shadow: 5px 5px 10px rgb(124, 124, 124);
+    font-size: 0.8em;
+}
+
+#buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    #START{
+        background-color: rgb(9, 255, 26);
+    }
+    #RESET{
+        background-color: rgb(178, 195, 214);
+    }
+    #STOP{
+        background-color: rgb(209, 22, 22);
+    }
+}
+
+button{
+    height: 15vh;
+    width: 30vh;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px black;
+    border: none;
+    
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.05) perspective(1px);
+    transition: .5s cubic-bezier(0.47, 0, 0.745, 0.715);
+    opacity: 80%;
+}
+button:active{
+    cursor: pointer;
+        transform: scale(.9);
+        transition: .5s;}
