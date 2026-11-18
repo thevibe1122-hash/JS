@@ -1,0 +1,17 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4.5em;
+}
+#mybox{
+    background-color: aquamarine;
+    width: 300px;
+    height: 300px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+button{
+font-size: 3rem;
+}
