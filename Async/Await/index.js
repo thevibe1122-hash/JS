@@ -55,6 +55,8 @@ async function do_housework() {
 
     const washDishesResult = await wash_dishes();
     console.log(washDishesResult);
+
+    console.log('All housework done!');
 }
 
 do_housework()
