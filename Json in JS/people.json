@@ -1,0 +1,34 @@
+[
+    {
+    "name": "sponjbob",
+    "age": 20,
+    "city": "Bikini Bottom",
+    "is_married": false,
+    "hobby": ["jellyfishing", "blowing bubbles", "cooking"]
+    },
+
+    {
+    "name": "paterick",
+    "age": 19,
+    "city": "Bikini Bottom",
+    "is_married": false,
+    "hobby": ["sleeping", "eating ", "annoying spongebob"]
+    },
+
+    {
+    "name": "sandy",
+    "age": 22,
+    "city": "Bikini Bottom",
+    "is_married": false,
+    "hobby": ["science", "rock climbing", "playing board games"]
+    },
+
+    {
+    "name": "squidward",
+    "age": 25,
+    "city": "Bikini Bottom",
+    "is_married": false,
+    "hobby": ["playing clarinet", "complaining", "being grumpy"]
+    }
+
+]

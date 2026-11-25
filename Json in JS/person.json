@@ -1,0 +1,7 @@
+{
+    "name": "sponjbob",
+    "age": 20,
+    "city": "Bikini Bottom",
+    "is_married": false,
+    "hobby": ["jellyfishing", "blowing bubbles", "cooking"]
+}
