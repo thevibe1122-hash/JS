@@ -47,6 +47,7 @@ function wash_dishes() {
 }
 
 async function do_housework() {
+   try {
     const walkDogResult = await walk_dog();
     console.log(walkDogResult);
 
@@ -56,7 +57,10 @@ async function do_housework() {
     const washDishesResult = await wash_dishes();
     console.log(washDishesResult);
 
-    console.log('All housework done!');
+    console.log('All housework done!');}
+    catch (error) {
+        console.error('Error occurred:', error);
+    }
 }
 
 do_housework()
